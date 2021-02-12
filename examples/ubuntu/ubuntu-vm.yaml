@@ -26,7 +26,7 @@ spec:
           type: ""
         resources:
           requests:
-            memory: "256Mi"
+            memory: "1024Mi"
             cpu: "500m"
       networks:
       - name: default
