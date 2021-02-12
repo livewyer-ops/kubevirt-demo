@@ -19,12 +19,18 @@ spec:
           - disk:
               bus: virtio
             name: cloudinitdisk
+          interfaces:
+          - name: default
+            bridge: {}
         machine:
           type: ""
         resources:
           requests:
             memory: "256Mi"
             cpu: "500m"
+      networks:
+      - name: default
+        pod: {}
       volumes:
       - name: containerdisk
         dataVolume:
