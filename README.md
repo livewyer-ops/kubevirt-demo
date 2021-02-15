@@ -52,7 +52,7 @@ kubectl create -f https://github.com/kubevirt/containerized-data-importer/releas
 Import the disk image from https://cloud-images.ubuntu.com/ using a `DataVolume`
 
 ```
-kubectl apply -f examples/ubuntu/ubuntu-data-volume.yaml
+kubectl apply -f examples/ubuntu/data-volume.yaml
 ```
 
 Wait for the import process to complete
@@ -64,7 +64,7 @@ kubectl get datavolume
 #### Deploy the Ubuntu VM using the DataVolume
 
 ```
-kubectl apply -f examples/ubuntu/ubuntu-vm.yaml
+kubectl apply -f examples/ubuntu/vm.yaml
 ```
 
 Check the Virtual Machine Instance (VMI) has been created
@@ -79,7 +79,7 @@ kubectl get vm, vmi, pod
 kubectl virt connect ubuntuvm
 ```
 
-Login with the `ubuntu` user. The user details can be found in the `examples/ubuntu/ubuntu-vm.yaml`. You'll have to decode the value of `userDataBase64` with `echo "<STRING> | base64 --decode`.
+Login with the `ubuntu` user. The user details can be found in the `examples/ubuntu/vm.yaml`. You'll have to decode the value of `userDataBase64` with `echo "<STRING> | base64 --decode`.
 
 #### Possible Issue
 
