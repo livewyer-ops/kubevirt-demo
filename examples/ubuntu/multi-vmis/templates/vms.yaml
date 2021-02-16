@@ -44,7 +44,13 @@ spec:
           name: {{ $values.basename }}-data-volume-{{ $counter }}
       - name: cloudinitdisk
         cloudInitNoCloud:
-          userDataBase64: {{ $values.userDatabase64 }}
+          userData: |
+            #cloud-config
+            password: passwd
+            chpasswd: { expire: False }
+            ssh_pwauth: True
+            ssh_authorized_keys:
+            - ssh-rsa {{ $values.ssh.publicKey }}
   dataVolumeTemplates:
   - metadata:
       name: {{ $values.basename }}-data-volume-{{ $counter }}

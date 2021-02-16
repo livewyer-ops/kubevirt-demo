@@ -16,3 +16,6 @@ dataVolumeTemplates:
     requests:
       storage: 4Gi
 
+ssh:
+  publicKey: SSH_PUBLIC_KEY
+

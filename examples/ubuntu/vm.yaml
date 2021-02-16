@@ -37,4 +37,10 @@ spec:
           name: ubuntu-data-volume
       - name: cloudinitdisk
         cloudInitNoCloud:
-          userDataBase64: I2Nsb3VkLWNvbmZpZwpwYXNzd29yZDogcGFzc3dkCnNzaF9wd2F1dGg6IFRydWUKY2hwYXNzd2Q6IHsgZXhwaXJlOiBGYWxzZSB9
+          userData: |
+            #cloud-config
+            password: passwd
+            chpasswd: { expire: False }
+            ssh_pwauth: True
+            ssh_authorized_keys:
+            - ssh-rsa PUBLIC_SSH_KEY
