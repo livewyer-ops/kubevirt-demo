@@ -33,6 +33,12 @@ kubectl create -f https://github.com/kubevirt/kubevirt/releases/download/${VERSI
 kubectl create -f https://github.com/kubevirt/kubevirt/releases/download/${VERSION}/kubevirt-cr.yaml
 ```
 
+Wait until the kubevirt status is `Deployed`
+
+```
+kubectl get all -n kubevirt
+```
+
 ### Install Kubevirt's Containerized Data Importer
 
 This demo was tested with CDI version v1.30.0. You may choose to run `export VERSION=v1.30.0` instead of the export command below.
