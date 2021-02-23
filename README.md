@@ -49,7 +49,10 @@ kubectl create -f https://github.com/kubevirt/containerized-data-importer/releas
 
 #### Import the Ubuntu 20.04 Cloud Image
 
-Import the disk image from https://cloud-images.ubuntu.com/ using a `DataVolume`
+Open the `examples/ubuntu/data-volume.yaml` file and confirm the URL for the cloud image still exists at https://cloud-images.ubuntu.com/.
+If it doesn't exist you'll have to update it.
+
+If it exists, import the disk image using a `DataVolume`
 
 ```
 kubectl apply -f examples/ubuntu/data-volume.yaml
