@@ -92,7 +92,7 @@ Login with the `ubuntu` user. The user details can be found in the `examples/ubu
 
 #### Possible Issue
 
-After connecting to the console, you may get the following errors
+After connecting to the console, you may get the following error that usually shows up if you delete a VM and recreate it using the same `DataVolume`
 
 *Error check 1*
 
