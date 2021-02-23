@@ -1,9 +1,9 @@
 apiVersion: v1
 kind: Pod
 metadata:
-  name: openssh2
+  name: openssh
 spec:
   containers:
-  - name: openssh2
+  - name: openssh
     image: linuxserver/openssh-server
-  nodeName: NODE_NAME
+  nodeName: kind-worker3

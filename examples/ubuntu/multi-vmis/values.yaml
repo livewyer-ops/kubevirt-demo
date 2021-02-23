@@ -7,11 +7,9 @@ resources:
     memory: "1024Mi"
     cpu: "500m"
 
-userDatabase64: "I2Nsb3VkLWNvbmZpZwpwYXNzd29yZDogcGFzc3dkCnNzaF9wd2F1dGg6IFRydWUKY2hwYXNzd2Q6IHsgZXhwaXJlOiBGYWxzZSB9"
-
 dataVolumeTemplates:
   source:
-    url: "https://cloud-images.ubuntu.com/focal/20210210/focal-server-cloudimg-amd64.img"
+    url: "https://cloud-images.ubuntu.com/focal/20210216/focal-server-cloudimg-amd64.img"
   resources:
     requests:
       storage: 4Gi
